@@ -1,6 +1,10 @@
 require 'rails_helper.rb'
 
 feature 'Index of posts' do
+  background do
+    user = create(:user)
+    sign_in_with user
+  end
   scenario 'display all posts' do
     job_one = create(:post, caption: "This is post one")
     job_two = create(:post, caption: "This is post two")

@@ -18,6 +18,8 @@ gem 'haml'
 gem 'simple_form'
 gem "paperclip", "~> 5.0.0"
 gem 'factory_girl'
+gem 'devise'
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
