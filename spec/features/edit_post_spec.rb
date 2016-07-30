@@ -3,11 +3,11 @@ require 'rails_helper.rb'
 feature 'editing post' do
   background do
     user = create(:user)
-    user_two = create(:user, email: 'hi@hi.com',
-                             user_name: 'BennyBoy',
+    user_two = create(:user, email: 'natalee@gmail.com',
+                             user_name: 'natalee',
                              id: user.id + 1)
-    post = create(:post)
-    post_two = create(:post, user_id: user.id + 1)
+    post = create(:post, user: user)
+    post_two = create(:post, user: user_two)
     sign_in_with user
     visit '/'
   end
